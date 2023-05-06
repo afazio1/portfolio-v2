@@ -1,19 +1,23 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+  font-family: 'Visitor';
+  src: url('../../public/fonts/visitor1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
-	font-family: Verdana, sans-serif;
+	font-family: 'Source Code Pro', monospace;
 	margin: auto;
 	padding: 20px;
 	max-width: 65ch;
 	text-align: left;
-	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #444;
+	color: white;
+	background-color: #2a373e;
 }
 h1,
 h2,
@@ -23,10 +27,10 @@ h5,
 h6,
 strong,
 b {
-	color: #222;
+	color: #91C0D8;
 }
 a {
-	color: #3273dc;
+	color: #4ee760;
 }
 nav a {
 	margin-right: 10px;
@@ -50,18 +54,20 @@ img {
 }
 code {
 	padding: 2px 5px;
-	background-color: #f2f2f2;
+	background-color: #24292e;
+	border-radius: 3px;
 }
 pre {
 	padding: 1rem;
 	border-radius: 5px;
+	
 }
 pre > code {
 	all: unset;
 }
 blockquote {
 	border: 1px solid #999;
-	color: #222;
+	background-color: #24292e;;
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
