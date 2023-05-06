@@ -6,8 +6,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import BlogPostCard from '../components/BlogPostCard.astro';
 
+
 const posts = (await getCollection('blog')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+	// @ts-expect-error
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
@@ -34,6 +36,7 @@ const posts = (await getCollection('blog')).sort(
 				color: #8e32dc;
 			}
 		</style>
+
 	</head>
 	<body>
 		<Header />

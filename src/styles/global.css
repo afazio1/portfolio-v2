@@ -54,6 +54,7 @@ code {
 }
 pre {
 	padding: 1rem;
+	border-radius: 5px;
 }
 pre > code {
 	all: unset;
@@ -64,4 +65,11 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
+}
+.latex-inline {
+	display: inline;
+}
+
+.latex-block {
+	display: block;
 }
