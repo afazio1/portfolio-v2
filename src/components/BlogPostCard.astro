@@ -1,0 +1,10 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+const { post } = Astro.props;
+---
+
+<div>
+    <FormattedDate date={post.data.pubDate} />
+    <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+    <p>{post.data.description}</p>
+</div>
