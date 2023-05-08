@@ -9,7 +9,7 @@ import BlogPostCard from '../../components/BlogPostCard.astro';
 export async function getStaticPaths() {
     const posts = await getCollection('blog');
     return [
-        {params: {tag: "c-lang"}, props: {posts}},
+        {params: {tag: "development"}, props: {posts}},
         {params: {tag: "successes"}, props: {posts}},
         {params: {tag: "community"}, props: {posts}},
         {params: {tag: "blogging"}, props: {posts}},
