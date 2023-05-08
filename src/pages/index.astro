@@ -8,7 +8,6 @@ import BlogPostCard from '../components/BlogPostCard.astro';
 
 
 const posts = (await getCollection('blog')).sort(
-	// @ts-expect-error
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---

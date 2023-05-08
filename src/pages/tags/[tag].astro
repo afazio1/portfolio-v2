@@ -1,0 +1,72 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import BlogPostCard from '../../components/BlogPostCard.astro';
+
+export async function getStaticPaths() {
+    const posts = await getCollection('blog');
+    return [
+        {params: {tag: "development"}, props: {posts}},
+        {params: {tag: "successes"}, props: {posts}},
+        {params: {tag: "community"}, props: {posts}},
+        {params: {tag: "blogging"}, props: {posts}},
+        {params: {tag: "setbacks"}, props: {posts}},
+        {params: {tag: "cybersecurity"}, props: {posts}}
+    ];
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
+const sortedPosts = filteredPosts.sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			ul {
+				list-style-type: none;
+				padding: unset;
+			}
+			ul li {
+				display: flex;
+				border-bottom: 1px solid #F2E863;
+				margin: 0 0 10px 10px;
+			}
+			ul li :global(time) {
+				flex: 0 0 130px;
+				font-style: italic;
+				color: white;
+			}
+			ul li a:visited {
+				color: #8e32dc;
+			}
+		</style>
+
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h2>Posts: {tag}</h2>
+			<section>
+				<ul>
+					{
+						sortedPosts.map((post) => (
+							<li>
+								<BlogPostCard post={post}/>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

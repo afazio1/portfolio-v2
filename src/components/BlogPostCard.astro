@@ -1,5 +1,6 @@
 ---
 import FormattedDate from '../components/FormattedDate.astro';
+import Tags from "../components/Tags.astro";
 const { post } = Astro.props;
 ---
 
@@ -7,4 +8,5 @@ const { post } = Astro.props;
     <FormattedDate date={post.data.pubDate} />
     <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
     <p>{post.data.description}</p>
+    <Tags tags={post.data.tags} />
 </div>

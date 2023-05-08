@@ -79,3 +79,19 @@ blockquote {
 .latex-block {
 	display: block;
 }
+
+.tag {
+	color: #24292e;
+	background: #91C0D8;
+	padding: 4px 4px 4px 4px;
+	border-radius: 10px;
+	margin: 4px 4px 4px 0px;
+	border: 2px white  solid;
+	text-decoration: none;
+}
+.tag:hover {
+	color: #4ee760;
+}
+.tag-div {
+	margin: 1rem 0;
+}
