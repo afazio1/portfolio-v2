@@ -2,7 +2,7 @@
 title: "Making my Dev Blog using Astro.js 🚀"
 description: "Astro.js caught my interest due to its SSG capabilities and compatibility with markdown."
 pubDate: "May 07 2023"
-heroImage: "/images/astro-logo.png"
+heroImage: "/images/astro-logo.webp"
 tags: ["development"]
 ---
 
