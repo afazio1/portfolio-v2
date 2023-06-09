@@ -93,3 +93,7 @@ p {
 .katex {
 	color: #dedede;
 }
+.about {
+	border-bottom: #4ee760 solid 2px;
+	color: #dedede;
+}
