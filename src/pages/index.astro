@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import BlogPostCard from '../components/BlogPostCard.astro';
+import About from '../components/About.astro';
 
 
 const posts = (await getCollection('blog')).sort(
@@ -39,6 +40,7 @@ const posts = (await getCollection('blog')).sort(
 	</head>
 	<body>
 		<Header />
+		<About />
 		<main>
 			<h2>Posts</h2>
 			<section>
