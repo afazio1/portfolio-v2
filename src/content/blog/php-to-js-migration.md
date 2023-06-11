@@ -84,11 +84,6 @@ const formattedDate = `${year}-${month}-${day}`;
 ```
 This is the "cleanest" method I found for formatting a date in JS. Please tell me there's a better (native) way. 
 
-### No Pass By Reference
-I guess I agree that JavaScript developers are not responsible enough to be given pass by ref perms. It's crazy that PHP devs are though. 
-
-It's okay, I'll just throw around this 75,000 element array to each of my 10 helper functions. Good luck garbage collector. 
-
 ### Lack of Built-ins
 It's just hard to go from doing this:
 ```php
@@ -106,5 +101,5 @@ if (email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-
 ```
 
 ## Both languages are bad?
-No, not necessarily. They were just made for slightly different purposes. PHP is written in C, which is why it may assume developers responsibly use `require()` and give them access to pointers for pass by reference purposes. JavaScript is a high-level scripting language, which, by definition, should abstract most of these concepts. All in all, I found that translating code from one programming language to another was one of the most eye-opening experiences for me as a developer.
+No, not necessarily. They were just made for slightly different purposes. PHP is written in C, which is why it may assume developers responsibly use `require()`. JavaScript is a high-level scripting language, which, by definition, should abstract most of these concepts. All in all, I found that translating code from one programming language to another was one of the most eye-opening experiences for me as a developer.
 
