@@ -7,7 +7,8 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
-	color: #999999;
+	/* color: #999999; */
+	color: #dedede;
 	background-color: #0B0A07;
 	font-size: 19px;
 }
