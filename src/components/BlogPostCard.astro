@@ -5,8 +5,8 @@ const { post } = Astro.props;
 ---
 
 <div>
+    <b><a class="title" href={`/blog/${post.slug}/`}>{post.data.title}</a></b>
     <FormattedDate date={post.data.pubDate} />
-    <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-    <p>{post.data.description}</p>
+    <p class="p-card">{post.data.description}</p>
     <Tags tags={post.data.tags} />
 </div>

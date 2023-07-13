@@ -24,8 +24,12 @@ const posts = (await getCollection('blog')).sort(
 			}
 			ul li {
 				display: flex;
-				border-bottom: 1px solid #F2E863;
-				margin: 0 0 10px 10px;
+				margin: 0 0 20px 20px;
+				background-color: #1f1c14;
+				min-width: 85%;
+				max-width: 85%;
+				padding: 14px;
+				border-radius: 8px;
 			}
 			ul li :global(time) {
 				flex: 0 0 130px;
