@@ -8,21 +8,19 @@ import BlogPostCard from '../../components/BlogPostCard.astro';
 
 export async function getStaticPaths() {
     const posts = await getCollection('blog');
-    return [
-        {params: {tag: "development"}, props: {posts}},
-        {params: {tag: "successes"}, props: {posts}},
-        {params: {tag: "community"}, props: {posts}},
-        {params: {tag: "blogging"}, props: {posts}},
-        {params: {tag: "setbacks"}, props: {posts}},
-        {params: {tag: "cybersecurity"}, props: {posts}},
-		{params: {tag: "internship"}, props: {posts}}
-    ];
+    const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+	return uniqueTags.map((tag) => {
+		const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
+		return {
+			params: { tag },
+      		props: { posts: filteredPosts },
+		};
+	});
 }
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
-const sortedPosts = filteredPosts.sort(
+const sortedPosts = posts.sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
