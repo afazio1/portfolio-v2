@@ -3,7 +3,7 @@ title: "Interns, Take Notes"
 description: "How I made a fool of myself by thinking I was too good for note taking."
 pubDate: "Jun 28 2023"
 heroImage: ""
-tags: ["internship"]
+tags: ["internship", "setbacks"]
 ---
 
 I used to think taking notes was silly. Scribbling in a notebook just seemed like a way to make people believe you were paying attention. Especially, in work environments. 
