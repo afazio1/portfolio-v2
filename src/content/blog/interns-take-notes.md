@@ -2,7 +2,6 @@
 title: "Interns, Take Notes"
 description: "How I made a fool of myself by thinking I was too good for note taking."
 pubDate: "Jun 28 2023"
-heroImage: ""
 tags: ["internship", "setbacks"]
 ---
 
