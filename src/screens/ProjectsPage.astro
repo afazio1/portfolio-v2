@@ -1,0 +1,17 @@
+---
+import { getCollection } from "astro:content";
+import ProjectCard from "../components/ProjectCard.astro";
+const projects = await getCollection('projects');
+---
+<section class="h-screen flex flex-col items-center w-full gap-5 justify-center" id="projects">
+    <h2 class="text-6xl font-visitor">Projects</h2>
+    <div class="flex flex-wrap text-off-white w-full items-center justify-center gap-10">
+        {
+            projects.map((project) => {
+                return (
+                   <ProjectCard class="shrink-[2]" project={project} />
+                )
+            })
+        }
+    </div>
+</section>

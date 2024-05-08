@@ -1,0 +1,107 @@
+body {
+	font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+	margin: auto;
+	padding: 20px;
+	max-width: 65ch;
+	text-align: left;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #dedede;
+	background-color: #0B0A07;
+	font-size: 19px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #91C0D8;
+	font-family: 'Source Code Pro', monospace;
+}
+strong, 
+b {
+	color: #91C0D8;
+}
+a {
+	color: #4ee760;
+}
+nav a {
+	margin-right: 10px;
+}
+textarea {
+	width: 100%;
+	font-size: 16px;
+}
+input {
+	font-size: 16px;
+}
+content {
+	line-height: 1.6;
+}
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+code {
+	padding: 2px 5px;
+	background-color: #24292e;
+	border-radius: 3px;
+}
+pre {
+	padding: 1rem;
+	border-radius: 5px;
+	
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	border: 1px solid #999;
+	background-color: #24292e;;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
+}
+.latex-inline {
+	display: inline;
+}
+
+.latex-block {
+	display: block;
+}
+
+.tag {
+	color: #999;
+	padding: 4px 4px 4px 4px;
+	margin: 4px 4px 4px 0px;
+}
+
+.tag-div {
+	margin: 0.5rem 0;
+}
+p {
+	line-height: 1.75;
+}
+.katex {
+	color: #dedede;
+}
+.about {
+	border-bottom: #50e762 solid 2px;
+	color: #dedede;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.title {
+	font-size: 22px;
+}
+time {
+	display: block;
+}
+.p-card {
+	margin: 0.5rem 0;
+}

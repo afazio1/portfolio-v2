@@ -1,0 +1,22 @@
+---
+import Image from "astro/components/Image.astro";
+const { project } = Astro.props;
+const { Content } = await project.render();
+import "../styles/project.css";
+import { Icon } from 'astro-icon/components';
+---
+<div class="w-4/5 sm:w-1/3 bg-dark-gray p-4 rounded-md sm:min-h-full project flex flex-col justify-between space-y-4">
+    {project.data.heroImage && <Image class="rounded" src={project.data.heroImage} alt={project.data.heroAlt}/>}
+    <article class="flex flex-col gap-2">
+        <div>
+            <Content/>
+        </div>
+        <div class="text-off-white text-wrap">
+            {project.data.techstack.map((tech, index) => <span class="font-bold text-md">{tech} {index !== project.data.techstack.length - 1 && <> &#x2022; </>} </span>)}
+        </div>
+        <div class="flex flex-row gap-2">
+            <a href={project.data.github}><Icon name="lucide:github" height={30} width={30}/></a>
+            {project.data.demo && <a href={project.data.demo}><Icon name="lucide:external-link" height={30} width={30}/></a>}
+        </div>
+    </article>
+</div>

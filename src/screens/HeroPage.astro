@@ -1,0 +1,29 @@
+---
+import Image from "astro/components/Image.astro";
+import avatar from "../../public/avatar.png";
+import github from "../../public/github.png";
+import linkedin from "../../public/linkedin.png";
+import twitch from "../../public/twitch.png";
+import youtube from "../../public/youtube.png";
+import instragram from "../../public/instagram.png";
+import "../styles/global.css";
+import { Icon } from 'astro-icon/components';
+---
+
+<section class="flex flex-col sm:flex-row gap-1 sm:gap-10 w-full space-x-15 justify-center items-center h-screen bg-dark">
+    <section class="text-off-white">
+        <h1 class="text-8xl sm:text-9xl text-center sm:text-left text-off-white font-visitor">Alexa Fazio</h1>
+        <p class="text-2xl text-center sm:text-left">Full-stack developer</p>
+        <p class="text-2xl text-center sm:text-left">CS @ <span class="text-lime">Georgia Tech</span></p>
+        <div class="flex flex-row gap-6 justify-center sm:justify-start my-12">
+            <a class="hover:text-lime" href=""><Icon name="lucide:github" width={36} height={36}/></a>
+            <a class="hover:text-lime" href=""><Icon name="lucide:linkedin" width={36} height={36}/></a>
+            <a class="hover:text-lime" href=""><Icon name="lucide:youtube" width={36} height={36}/></a>
+            <a class="hover:text-lime" href=""><Icon name="lucide:twitch" width={36} height={36}/></a>
+            <a class="hover:text-lime" href=""><Icon name="lucide:instagram" width={36} height={36}/></a>
+        </div>
+    </section>
+    <section>
+        <Image src={avatar} alt="Alexa Fazio" class="w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] rounded-full border-4 border-lime" />
+    </section>
+</section>
