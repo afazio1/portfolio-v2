@@ -1,24 +1,23 @@
 body {
 	font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
-	margin: auto;
+	/* margin: auto;
 	padding: 20px;
 	max-width: 65ch;
-	text-align: left;
+	text-align: left; */
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	line-height: 1.5;
+	/* line-height: 1.5;
 	color: #dedede;
 	background-color: #0B0A07;
-	font-size: 19px;
+	font-size: 19px; */
+	@apply bg-dark;
+	@apply text-off-white;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #91C0D8;
-	font-family: 'Source Code Pro', monospace;
+h1 {
+	@apply text-6xl font-visitor;
+}
+h2 {
+	@apply text-5xl font-visitor;
 }
 strong, 
 b {
@@ -95,9 +94,6 @@ p {
 	color: #dedede;
 	margin-bottom: 50px;
 	margin-top: 50px;
-}
-.title {
-	font-size: 22px;
 }
 time {
 	display: block;

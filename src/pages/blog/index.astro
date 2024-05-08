@@ -6,6 +6,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import BlogPostCard from '../../components/BlogPostCard.astro';
 import About from '../../components/About.astro';
+import "../../styles/global.css";
+import "../../styles/blogpost.css"
+import Navbar from "../../components/Navbar.astro";
+
 
 
 const posts = (await getCollection('blog')).sort(
@@ -17,7 +21,7 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
+		<!-- <style>
 			ul {
 				list-style-type: none;
 				padding: unset;
@@ -39,16 +43,17 @@ const posts = (await getCollection('blog')).sort(
 			ul li a:visited {
 				color: #8e32dc;
 			}
-		</style>
+		</style> -->
 
 	</head>
-	<body>
-		<Header />
-		<About />
-		<main>
-			<h2>Posts</h2>
+	<body class="w-screen flex flex-col items-center">
+		<Navbar />
+		<main class="w-4/5 sm:w-1/2">
+			<h1 class="text-6xl font-visitor">Blog</h1>
+			<About />
+			<h2 class="text-4xl font-visitor py-4">Posts</h2>
 			<section>
-				<ul>
+				<ul class="flex flex-col gap-4 justify-center">
 					{
 						posts.map((post) => (
 							<li>
