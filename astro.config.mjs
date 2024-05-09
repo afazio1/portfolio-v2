@@ -8,7 +8,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://blog.alexafazio.dev',
+  site: 'https://alexafazio.dev',
   integrations: [tailwind(), mdx(), sitemap(), icon({
     include: {
       lucide: ["github", "external-link", "youtube", "twitch", "linkedin", "instagram", "chevron-right"],

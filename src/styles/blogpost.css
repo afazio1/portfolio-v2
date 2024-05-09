@@ -77,7 +77,6 @@ body {
 	blockquote {
 		border: 1px solid #999;
 		background-color: #24292e;;
-		/* padding: 2px 0px 2px 20px; */
 		margin: 0px;
 		font-style: italic;
 		@apply p-4;
