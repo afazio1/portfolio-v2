@@ -1,23 +1,7 @@
 body {
 	font-family: -apple-system,BlinkMacSystemFont,segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
-	/* margin: auto; */
-	/* padding: 20px; */
-	/* max-width: 65ch; */
-	/* text-align: left; */
-	/* word-wrap: break-word;
-	overflow-wrap: break-word; */
 	@apply bg-dark text-off-white;
 }
-
-.icon {
-	image-rendering: pixelated;
-  	image-rendering: -moz-crisp-edges;
-  	image-rendering: crisp-edges;
-}
-/* @tailwind base;
-@layer base {
-	
-} */
 
 @font-face {
 	font-family: 'Visitor';
