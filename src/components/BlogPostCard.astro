@@ -4,8 +4,8 @@ import Tags from "../components/Tags.astro";
 const { post } = Astro.props;
 ---
 
-<div>
-    <b><a class="title" href={`/blog/${post.slug}/`}>{post.data.title}</a></b>
+<div class="bg-dark-gray p-4 rounded text-xl flex flex-col gap-2">
+    <b><a class="text-lime text-2xl underline" href={`/blog/${post.slug}/`}>{post.data.title}</a></b>
     <FormattedDate date={post.data.pubDate} />
     <p class="p-card">{post.data.description}</p>
     <Tags tags={post.data.tags} />

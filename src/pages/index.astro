@@ -1,64 +1,24 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { getCollection } from 'astro:content';
-import BlogPostCard from '../components/BlogPostCard.astro';
-import About from '../components/About.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts.js';
+import BaseHead from "../components/BaseHead.astro";
+import Navbar from "../components/Navbar.astro";
+import HeroPage from "../screens/HeroPage.astro";
+import AboutPage from "../screens/AboutPage.astro";
 
-
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+import "../styles/global.css";
+import ProjectsPage from '../screens/ProjectsPage.astro';
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			ul {
-				list-style-type: none;
-				padding: unset;
-			}
-			ul li {
-				display: flex;
-				margin: 0 0 20px 20px;
-				background-color: #1f1c14;
-				min-width: 85%;
-				max-width: 85%;
-				padding: 14px;
-				border-radius: 8px;
-			}
-			ul li :global(time) {
-				flex: 0 0 130px;
-				font-style: italic;
-				color: #dedede;
-			}
-			ul li a:visited {
-				color: #8e32dc;
-			}
-		</style>
-
 	</head>
-	<body>
-		<Header />
-		<About />
-		<main>
-			<h2>Posts</h2>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<BlogPostCard post={post}/>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
-		<Footer />
+	<body class="overflow-x-hidden w-screen">
+        <Navbar />
+        <main class="h-screen">
+            <HeroPage />
+            <AboutPage />
+            <ProjectsPage />
+        </main>
 	</body>
 </html>

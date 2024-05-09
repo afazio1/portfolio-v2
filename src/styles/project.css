@@ -1,0 +1,12 @@
+.project {
+    @apply text-lg;
+}
+.project h1 {
+    @apply text-2xl text-lime font-bold;
+}
+.project a {
+    @apply text-lime underline;
+}
+.project p {
+    @apply text-wrap break-words;
+}
