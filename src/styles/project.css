@@ -1,3 +1,6 @@
+.project {
+    @apply text-lg;
+}
 .project h1 {
     @apply text-2xl text-lime font-bold;
 }

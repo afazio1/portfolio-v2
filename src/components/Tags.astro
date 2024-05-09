@@ -2,6 +2,6 @@
 const { tags } = Astro.props;
 ---
 
-<div class="tag-div">
+<div class="text-light-gray space-x-2">
         {tags.map((tag) => <a href={`/tags/${tag}/`} class="tag underline">#{tag}</a>)}
 </div>

@@ -7,6 +7,8 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Tags from "../components/Tags.astro";
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import "../styles/blogpost.css"
+import { Icon } from 'astro-icon/components';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -19,27 +21,15 @@ const thisPost = (await getCollection("blog", ({ data }) => {
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
 	<body>
-		<Header />
-		<main>
-			<article>
-				{(thisPost.data.heroImage && thisPost.data.heroAlt) && <Image src={thisPost.data.heroImage} alt={thisPost.data.heroAlt}/>}
+		<!-- <Navbar /> -->
+		<main class="blog-post flex flex-col w-screen justify-center items-center">
+			<span class="flex flex-row items-center justify-self-start w-4/5 sm:w-1/2 text-light-gray text-lg my-4 gap-1"><a class="breadcrumb" href="/blog">Blog</a><Icon class="inline" name="lucide:chevron-right" width={14} height={14} />{thisPost.data.title}</span>
+			<article class="flex flex-col w-4/5 sm:w-1/2 justify-center gap-5">
 				<h1 class="title">{title}</h1>
+				{(thisPost.data.heroImage && thisPost.data.heroAlt) && <Image src={thisPost.data.heroImage} alt={thisPost.data.heroAlt}/>}
 				<FormattedDate date={pubDate} />
 				{
 					updatedDate && (
