@@ -1,12 +1,12 @@
 ---
+import "../styles/global.css";
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts.js';
 import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar.astro";
 import HeroPage from "../screens/HeroPage.astro";
 import AboutPage from "../screens/AboutPage.astro";
-
-import "../styles/global.css";
 import ProjectsPage from '../screens/ProjectsPage.astro';
+import Footer from "../components/Footer.astro";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +19,7 @@ import ProjectsPage from '../screens/ProjectsPage.astro';
             <HeroPage />
             <AboutPage />
             <ProjectsPage />
+            <Footer showAffiliateLinks={false} />
         </main>
 	</body>
 </html>
