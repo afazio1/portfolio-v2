@@ -8,4 +8,4 @@ demo: "https://obsidian.md/plugins?search=markdown%20blogger"
 ---
 
 # Markdown Blogger
-A plugin for [Obsidian](https://obsidian.md/) that allows developers to push markdown notes to their local blog, portfolio, or static site.
+A plugin for [Obsidian](https://obsidian.md/) that allows developers to push markdown notes to their local blog, portfolio, or static site. Has over 3,500 downloads.
